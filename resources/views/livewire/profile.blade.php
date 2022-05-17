@@ -1,13 +1,14 @@
 <div class="main-content">
     <div class="page-header min-height-300 border-radius-xl mt-4"
-        style="background-image: url('../assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
+        style="background-image: url('{{ asset('assets/img/curved-images/curved0.jpg') }}'); background-position-y: 50%;">
         <span class="mask bg-gradient-primary opacity-6"></span>
     </div>
     <div class="card card-body blur shadow-blur mx-4 mt-n6">
         <div class="row gx-4">
             <div class="col-auto">
                 <div class="avatar avatar-xl position-relative">
-                    <img src="../assets/img/bruce-mars.jpg" alt="..." class="w-100 border-radius-lg shadow-sm">
+                    <img src="{{ asset('assets/img/bruce-mars.jpg') }}" alt="..."
+                        class="w-100 border-radius-lg shadow-sm">
                     <a href="javascript:;"
                         class="btn btn-sm btn-icon-only bg-gradient-light position-absolute bottom-0 end-0 mb-n2 me-n2">
                         <i class="fa fa-pen top-0" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -18,7 +19,7 @@
             <div class="col-auto my-auto">
                 <div class="h-100">
                     <h5 class="mb-1">
-                        Alec Thompson
+                        {{ $this->user->name }}
                     </h5>
                     <p class="mb-0 font-weight-bold text-sm">
                         CEO / Co-Founder
@@ -184,7 +185,7 @@
                 <div class="card-header pb-0 p-3">
                     <div class="row">
                         <div class="col-md-8 d-flex align-items-center">
-                            <h6 class="mb-0">Profile Information</h6>
+                            <h6 class="mb-0">Informações Pessoais</h6>
                         </div>
                         <div class="col-md-4 text-right">
                             <a href="javascript:;">
@@ -203,12 +204,14 @@
                     <hr class="horizontal gray-light my-4">
                     <ul class="list-group">
                         <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full
-                                Name:</strong> &nbsp; Alec M. Thompson</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong>
+                                Name:</strong> &nbsp; {{ $this->user->name }}</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong
+                                class="text-dark">Mobile:</strong>
                             &nbsp; (44) 123 1234 123</li>
                         <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong>
-                            &nbsp; alecthompson@mail.com</li>
-                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong>
+                            &nbsp; {{ $this->user->email }}</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong
+                                class="text-dark">Location:</strong>
                             &nbsp; USA</li>
                         <li class="list-group-item border-0 ps-0 pb-0">
                             <strong class="text-dark text-sm">Social:</strong> &nbsp;
@@ -235,7 +238,7 @@
                     <ul class="list-group">
                         <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
                             <div class="avatar me-3">
-                                <img src="../assets/img/kal-visuals-square.jpg" alt="kal"
+                                <img src="{{ asset('assets/img/kal-visuals-square.jpg') }}" alt="kal"
                                     class="border-radius-lg shadow">
                             </div>
                             <div class="d-flex align-items-start flex-column justify-content-center">
@@ -246,7 +249,8 @@
                         </li>
                         <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
                             <div class="avatar me-3">
-                                <img src="../assets/img/marie.jpg" alt="kal" class="border-radius-lg shadow">
+                                <img src="{{ asset('assets/img/marie.jpg') }}" alt="kal"
+                                    class="border-radius-lg shadow">
                             </div>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <h6 class="mb-0 text-sm">Anne Marie</h6>
@@ -256,7 +260,8 @@
                         </li>
                         <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
                             <div class="avatar me-3">
-                                <img src="../assets/img/ivana-square.jpg" alt="kal" class="border-radius-lg shadow">
+                                <img src="{{ asset('assets/img/ivana-square.jpg') }}" alt="kal"
+                                    class="border-radius-lg shadow">
                             </div>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <h6 class="mb-0 text-sm">Ivanna</h6>
@@ -266,7 +271,8 @@
                         </li>
                         <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
                             <div class="avatar me-3">
-                                <img src="../assets/img/team-4.jpg" alt="kal" class="border-radius-lg shadow">
+                                <img src="{{ asset('assets/img/team-4.jpg') }}" alt="kal"
+                                    class="border-radius-lg shadow">
                             </div>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <h6 class="mb-0 text-sm">Peterson</h6>
@@ -276,7 +282,8 @@
                         </li>
                         <li class="list-group-item border-0 d-flex align-items-center px-0">
                             <div class="avatar me-3">
-                                <img src="../assets/img/team-3.jpg" alt="kal" class="border-radius-lg shadow">
+                                <img src="{{ asset('assets/img/team-3.jpg') }}" alt="kal"
+                                    class="border-radius-lg shadow">
                             </div>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <h6 class="mb-0 text-sm">Nick Daniel</h6>
@@ -300,7 +307,7 @@
                             <div class="card card-blog card-plain">
                                 <div class="position-relative">
                                     <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../assets/img/home-decor-1.jpg" alt="img-blur-shadow"
+                                        <img src="{{ asset('assets/img/home-decor-1.jpg') }}" alt="img-blur-shadow"
                                             class="img-fluid shadow border-radius-xl">
                                     </a>
                                 </div>
@@ -321,19 +328,23 @@
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                 title="Elena Morison">
-                                                <img alt="Image placeholder" src="../assets/img/team-1.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-1.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
-                                                <img alt="Image placeholder" src="../assets/img/team-2.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-2.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
-                                                <img alt="Image placeholder" src="../assets/img/team-3.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-3.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
-                                                <img alt="Image placeholder" src="../assets/img/team-4.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-4.jpg') }}">
                                             </a>
                                         </div>
                                     </div>
@@ -344,7 +355,7 @@
                             <div class="card card-blog card-plain">
                                 <div class="position-relative">
                                     <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../assets/img/home-decor-2.jpg" alt="img-blur-shadow"
+                                        <img src="{{ asset('assets/img/home-decor-2.jpg') }}" alt="img-blur-shadow"
                                             class="img-fluid shadow border-radius-lg">
                                     </a>
                                 </div>
@@ -364,20 +375,24 @@
                                         <div class="avatar-group mt-2">
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
-                                                <img alt="Image placeholder" src="../assets/img/team-3.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-3.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
-                                                <img alt="Image placeholder" src="../assets/img/team-4.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-4.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                 title="Elena Morison">
-                                                <img alt="Image placeholder" src="../assets/img/team-1.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-1.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
-                                                <img alt="Image placeholder" src="../assets/img/team-2.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-2.jpg') }}">
                                             </a>
                                         </div>
                                     </div>
@@ -388,7 +403,7 @@
                             <div class="card card-blog card-plain">
                                 <div class="position-relative">
                                     <a class="d-block shadow-xl border-radius-xl">
-                                        <img src="../assets/img/home-decor-3.jpg" alt="img-blur-shadow"
+                                        <img src="{{ asset('assets/img/home-decor-3.jpg') }}" alt="img-blur-shadow"
                                             class="img-fluid shadow border-radius-xl">
                                     </a>
                                 </div>
@@ -408,20 +423,24 @@
                                         <div class="avatar-group mt-2">
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Peterson">
-                                                <img alt="Image placeholder" src="../assets/img/team-4.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-4.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nick Daniel">
-                                                <img alt="Image placeholder" src="../assets/img/team-3.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-3.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ryan Milly">
-                                                <img alt="Image placeholder" src="../assets/img/team-2.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-2.jpg') }}">
                                             </a>
                                             <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                 data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                 title="Elena Morison">
-                                                <img alt="Image placeholder" src="../assets/img/team-1.jpg">
+                                                <img alt="Image placeholder"
+                                                    src="{{ asset('assets/img/team-1.jpg') }}">
                                             </a>
                                         </div>
                                     </div>
@@ -445,4 +464,3 @@
     </div>
 </div>
 </div>
-

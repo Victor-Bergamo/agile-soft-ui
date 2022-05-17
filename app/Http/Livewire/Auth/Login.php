@@ -31,7 +31,7 @@ class Login extends Component
         if (Auth::user()) {
             redirect('/dashboard');
         }
-        $this->fill(['username' => 'henrique', 'password' => 'password']);
+        $this->fill(['username' => 'victor', 'password' => 'password']);
     }
 
     public function login()
